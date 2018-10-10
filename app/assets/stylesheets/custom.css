@@ -1,0 +1,12 @@
+.border-bottom{
+    border-bottom: 2px solid;
+}
+.gly-size{
+    font-size: 25px;
+}
+@media print
+{
+    .nprint { display: none; }
+    .print { display: block; }
+    
+}
