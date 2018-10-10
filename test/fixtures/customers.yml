@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  city: MyString
+  address: MyString
+  mobile: MyString
+  officaddress: MyString
+  officmobile: MyString
+  cost: MyString
+  housestatus: MyString
+  cnic: MyString
+  profession: MyString
+  designation: MyString
+  salary: 1
+  cnicimg1: MyString
+  cnicimg2: MyString
+  cusimg: MyString
+
+two:
+  name: MyString
+  city: MyString
+  address: MyString
+  mobile: MyString
+  officaddress: MyString
+  officmobile: MyString
+  cost: MyString
+  housestatus: MyString
+  cnic: MyString
+  profession: MyString
+  designation: MyString
+  salary: 1
+  cnicimg1: MyString
+  cnicimg2: MyString
+  cusimg: MyString

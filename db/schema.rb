@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_083002) do
+ActiveRecord::Schema.define(version: 2018_10_10_092104) do
+
+  create_table "customers", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "address"
+    t.string "mobile"
+    t.string "officaddress"
+    t.string "officmobile"
+    t.string "cost"
+    t.string "housestatus"
+    t.string "cnic"
+    t.string "profession"
+    t.string "designation"
+    t.integer "salary"
+    t.string "cnicimg1"
+    t.string "cnicimg2"
+    t.string "cusimg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "brand"

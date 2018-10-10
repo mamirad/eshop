@@ -1,0 +1,93 @@
+<%= form_with(model: customer, local: true) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% customer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile %>
+    <%= form.text_field :mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officaddress %>
+    <%= form.text_field :officaddress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officmobile %>
+    <%= form.text_field :officmobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.text_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :housestatus %>
+    <%= form.text_field :housestatus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnic %>
+    <%= form.text_field :cnic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profession %>
+    <%= form.text_field :profession %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.number_field :salary %>
+  </div>
+
+ <%= image_tag(@customer.cnicimg1.url, size: "300x300") if @customer.cnicimg1? %>
+  <div class="field">
+    <%= form.label :cnicimg1 %>
+    <%= form.file_field :cnicimg1 %>
+  </div>
+ <%= image_tag(@customer.cnicimg2.url, size: "300x300") if @customer.cnicimg2? %>
+  <div class="field">
+    <%= form.label :cnicimg2 %>
+    <%= form.file_field :cnicimg2 %>
+  </div>
+ <%= image_tag(@customer.cusimg.url, size: "300x300") if @customer.cusimg? %>
+  <div class="field">
+    <%= form.label :cusimg %>
+    <%= form.file_field :cusimg %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
