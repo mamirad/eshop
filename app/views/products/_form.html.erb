@@ -11,7 +11,14 @@
       </ul>
     </div>
   <% end %>
+<div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :name %>
+  </div>
 
+   
+    <%= form.hidden_field :status,value:'available' %>
+  
   <div class="field">
     <%= form.label :brand %>
     <%= form.text_field :brand %>
@@ -45,10 +52,10 @@
     <%= form.label :serial %>
     <%= form.text_field :serial %>
   </div>
-    <div class="field">
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity %>
-  </div>
+   <!--  <div class="field">
+    <%#= form.label :quantity %>
+    <%#= form.number_field :quantity %>
+  </div> -->
   <%= image_tag(@product.productimg.url, size: "300x300") if @product.productimg? %>
     <div class="field">
     <%= form.label :product_img %>

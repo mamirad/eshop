@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale: one
+  name1: MyString
+  profession1: MyString
+  designation1: MyString
+  city1: MyString
+  address1: MyString
+  mobile1: MyString
+  officaddress1: MyString
+  officmobile1: MyString
+  cnic21: MyString
+  beholderimg1: MyString
+  name2: MyString
+  profession2: MyString
+  designation2: MyString
+  city2: MyString
+  address2: MyString
+  mobile2: MyString
+  officaddress2: MyString
+  officmobile2: MyString
+  cnic2: MyString
+  beholderimg2: MyString
+
+two:
+  sale: two
+  name1: MyString
+  profession1: MyString
+  designation1: MyString
+  city1: MyString
+  address1: MyString
+  mobile1: MyString
+  officaddress1: MyString
+  officmobile1: MyString
+  cnic21: MyString
+  beholderimg1: MyString
+  name2: MyString
+  profession2: MyString
+  designation2: MyString
+  city2: MyString
+  address2: MyString
+  mobile2: MyString
+  officaddress2: MyString
+  officmobile2: MyString
+  cnic2: MyString
+  beholderimg2: MyString

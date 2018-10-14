@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Product ID</th>
       <th>Brand</th>
       <th>Model</th>
       <th>Size</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><%= product.id %></td>
         <td><%= product.brand %></td>
         <td><%= product.model %></td>
         <td><%= product.size %></td>

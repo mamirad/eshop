@@ -1,0 +1,26 @@
+<div class="container">
+<table class="table table-bordered">
+<tr>
+<th>id</th>
+<th>IMG</th>	
+<th>Model</th>
+<th>Brand</th>
+<th>color</th>
+<th>Instalment Price</th>
+<th>pay Dues</th>
+<th>
+</tr>
+<%@record.each do |record|%>
+<tr>
+	<td><%=record.id%></td>
+	<td><%= image_tag(record.productimg.url, size: "30x30") if record.productimg? %></td>
+	<td><%=record.model%></td>
+	<td><%=record.brand%></td>
+	<td><%=record.color%></td>
+	<td><%=record.instalmentprice%></td>
+	<td><%=link_to "pay dues", paydues_path(record.saleid)%></td>
+
+</tr>
+<%end%>
+</table>
+</div>

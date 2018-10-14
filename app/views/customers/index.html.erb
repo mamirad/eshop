@@ -39,9 +39,9 @@
         <td><%= customer.profession %></td>
         <td><%= customer.designation %></td>
         <td><%= customer.salary %></td>
-        <td><%= image_tag(customer.cnicimg1.url, size: "300x300") if customer.cnicimg1? %></td>
-        <td><%= image_tag(customer.cnicimg2.url, size: "300x300") if customer.cnicimg2? %></td>
-        <td><%= image_tag(customer.cusimg.url, size: "300x300") if customer.cusimg? %></td>
+        <td><%= image_tag(customer.cnicimg1.url, size: "50x50") if customer.cnicimg1? %></td>
+        <td><%= image_tag(customer.cnicimg2.url, size: "30x50") if customer.cnicimg2? %></td>
+        <td><%= image_tag(customer.cusimg.url, size: "30x30") if customer.cusimg? %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
