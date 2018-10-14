@@ -1,0 +1,122 @@
+<%= form_with(model: beholder, local: true) do |form| %>
+  <% if beholder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beholder.errors.count, "error") %> prohibited this beholder from being saved:</h2>
+
+      <ul>
+      <% beholder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sale_id %>
+    <%= form.text_field :sale_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name1 %>
+    <%= form.text_field :name1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profession1 %>
+    <%= form.text_field :profession1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation1 %>
+    <%= form.text_field :designation1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city1 %>
+    <%= form.text_field :city1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address1 %>
+    <%= form.text_field :address1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile1 %>
+    <%= form.text_field :mobile1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officaddress1 %>
+    <%= form.text_field :officaddress1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officmobile1 %>
+    <%= form.text_field :officmobile1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnic21 %>
+    <%= form.text_field :cnic21 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beholderimg1 %>
+    <%= form.text_field :beholderimg1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name2 %>
+    <%= form.text_field :name2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profession2 %>
+    <%= form.text_field :profession2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designation2 %>
+    <%= form.text_field :designation2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city2 %>
+    <%= form.text_field :city2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address2 %>
+    <%= form.text_field :address2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile2 %>
+    <%= form.text_field :mobile2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officaddress2 %>
+    <%= form.text_field :officaddress2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :officmobile2 %>
+    <%= form.text_field :officmobile2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnic2 %>
+    <%= form.text_field :cnic2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beholderimg2 %>
+    <%= form.text_field :beholderimg2 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

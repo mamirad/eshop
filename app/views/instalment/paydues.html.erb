@@ -1,0 +1,26 @@
+<div class="container">
+
+
+
+<%= form_tag paid_path, method: :get, id: "search form" do %>
+<%= hidden_field_tag :saleid,params[:saleid]%>
+<%= number_field_tag :paidamount, params[:paidamount], 
+                                  placeholder: "Enter Amount", autofocus: true,
+                                  class: "form-control search-box input-lg" %>
+
+<br>
+		<center> <%= button_tag(type: :submit, class: "btn btn-success", data: { confirm: "i hope you have collected complect instalment? \n Are you sure to submit?" })do %>
+          <i class="fa fa-search"></i>Collected RS: <%=@sale_attr.instalmentprice%> AND Agreed?
+        <% end %>
+    </center>
+
+
+
+
+<%end%>
+<div id="result">
+	
+<%#= render 'users/resultt'%>
+</div>
+
+</div>

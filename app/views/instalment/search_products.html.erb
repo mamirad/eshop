@@ -1,0 +1,26 @@
+<div class="container">
+
+
+
+<%= form_tag searched_products_path, remote: true, method: :get, id: "search form" do %>
+
+<%= number_field_tag :cuscnic, params[:cuscnic], 
+                                  placeholder: "Enter Customer CNIC Number", autofocus: true,
+                                  class: "form-control search-box input-lg" %>
+
+<br>
+		<center> <%= button_tag(type: :submit, class: "btn btn-success")do %>
+          <i class="fa fa-search"></i> Search Result
+        <% end %>
+    </center>
+
+
+
+
+<%end%>
+<div id="result">
+	
+<%#= render 'users/resultt'%>
+</div>
+
+</div>

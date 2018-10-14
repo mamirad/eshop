@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product: one
+  customer: one
+  discount: 1
+  paid: 1
+  instalment: 1
+  status: MyString
+  left: 1
+
+two:
+  product: two
+  customer: two
+  discount: 1
+  paid: 1
+  instalment: 1
+  status: MyString
+  left: 1

@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @customer.mobile %>
+</p>
+
+<p>
+  <strong>Officaddress:</strong>
+  <%= @customer.officaddress %>
+</p>
+
+<p>
+  <strong>Officmobile:</strong>
+  <%= @customer.officmobile %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @customer.cost %>
+</p>
+
+<p>
+  <strong>Housestatus:</strong>
+  <%= @customer.housestatus %>
+</p>
+
+<p>
+  <strong>Cnic:</strong>
+  <%= @customer.cnic %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @customer.profession %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @customer.designation %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @customer.salary %>
+</p>
+
+<p>
+  <strong>Cnicimg1:</strong>
+ 
+  <%= image_tag(@customer.cnicimg1.url, size: "300x300") if @customer.cnicimg1? %>
+</p>
+
+<p>
+  <strong>Cnicimg2:</strong>
+  <%= image_tag(@customer.cnicimg2.url, size: "300x300") if @customer.cnicimg2? %>
+</p>
+
+<p>
+  <strong>Cusimg:</strong>
+ <%= image_tag(@customer.cusimg.url, size: "300x300") if @customer.cusimg? %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

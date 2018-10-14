@@ -43,46 +43,47 @@
             <li id="sections" class=" treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
-          <span>Sections</span>
+          <span>Customer</span>
           <span class="pull-right-container">
               <span class="label label-primary pull-right">2</span>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li class=""><a href="<%#=new_section_path%>"><i class="fa fa-circle-o"></i>Add section</a></li>
-          <li><a href="<%#=sections_path%>"><i class="fa fa-circle-o"></i>View sections</a></li>
+          <li class=""><a href="<%=new_customer_path%>"><i class="fa fa-circle-o"></i>Add Customer</a></li>
+          <li><a href="<%=customers_path%>"><i class="fa fa-circle-o"></i>View Customer</a></li>
         </ul>
       </li>
               <li id="shifts" class=" treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
-          <span>Shift</span>
+          <span>Beholder</span>
           <span class="pull-right-container">
               <span class="label label-primary pull-right">2</span>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li class=""><a href="<%#=new_shift_path%>"><i class="fa fa-circle-o"></i>Add shift</a></li>
-          <li><a href="<%#=shifts_path%>"><i class="fa fa-circle-o"></i>View shifts</a></li>
+          <li class=""><a href="<%=new_beholder_path%>"><i class="fa fa-circle-o"></i>Add Beholder</a></li>
+          <li><a href="<%=beholders_path%>"><i class="fa fa-circle-o"></i>View Beholder</a></li>
         </ul>
       </li>
             <li id="establishclasses" class=" treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
-          <span>Establish Classes</span>
+          <span>Accounts</span>
           <span class="pull-right-container">
               <span class="label label-primary pull-right">2</span>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li class=""><a href="<%#= new_establishclass_path%>"><i class="fa fa-circle-o"></i>class</a></li>
-          <li><a href="<%#=establishclasses_path%>"><i class="fa fa-circle-o"></i>View Class</a></li>
+          <li class=""><a href="<%= search_products_path%>"><i class="fa fa-circle-o"></i>Add instalment</a></li>
+          <li><a href="<%=view_instalment_path%>"><i class="fa fa-circle-o"></i>View instalment</a></li>
         </ul>
       </li>
+      
       <li  id="teachers"class="treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
-          <span>Teachers</span>
+          <span>Sale</span>
           <span class="pull-right-container">
               <span class="label label-primary pull-right">2</span>
             </span>
@@ -93,7 +94,7 @@
 
 
 
-          <li><a href=""><i class="fa fa-circle-o"></i> Add Teacher</a></li>
+          <li><a href="<%=new_sale_path%>"><i class="fa fa-circle-o"></i> Sale product</a></li>
           <li><a href=""><i class="fa fa-circle-o"></i> View Teacher</a></li>
           <li><a href=""><i class="fa fa-circle-o"></i> Search Teacher</a></li>
           <li class="treeview">
@@ -114,7 +115,7 @@
 
         </ul>
       </li>
-
+<!--
       <li id="sudents" class="treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
@@ -198,7 +199,7 @@
 
 
 
-      <li id="attandance"class="treeview">
+     <!--  <li id="attandance"class="treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
           <span>Attendance</span>
@@ -207,7 +208,7 @@
             </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href=""><i class="fa fa-circle-o"></i>View Attendance</a></li>
+          <li><a href=""><i class="fa fa-circle-o"></i>View Attendance</a></li> -->
           <!--                <li><a href="--><?php //echo $_SESSION["domain"]; ?><!--cource/view_class_cource/view_class_cource.php"><i class="fa fa-circle-o"></i>View Allocate Cource</a></li>-->
           <!--                <li><a href="--><?php //echo $_SESSION["domain"]; ?><!--cource/search_class_cource/search_class_cource.php"><i class="fa fa-circle-o"></i>search Allocate Cource</a></li>-->
           <!---->
@@ -216,7 +217,7 @@
       </li>
 
 
-      <li id="timetable"class="treeview">
+    <!--   <li id="timetable"class="treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
           <span>Time Table</span>
@@ -224,14 +225,14 @@
               <span class="label label-primary pull-right">2</span>
             </span>
         </a>
-        <!--            <ul class="treeview-menu">-->
+                    <ul class="treeview-menu"> -->
         <!--                <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Teacher Attandace</a></li>-->
         <!--                <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Students Attandance</a></li>-->
         <!---->
         <!--            </ul>-->
       </li>
 
-
+<!-- 
 
       <li id="examschedule"class="treeview">
         <a href="#">
@@ -248,8 +249,8 @@
 
 
         </ul>
-      </li>
-      <li id="accounts" class="treeview">
+      </li> -->
+ <!--      <li id="accounts" class="treeview">
         <a href="#">
           <i class="fa fa-files-o"></i>
           <span>Accounts</span>
@@ -288,7 +289,7 @@
           </li>
 
         </ul>
-      </li>
+      </li> -->
     </ul>
   </section>
   <!-- /.sidebar -->
