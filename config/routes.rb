@@ -14,10 +14,17 @@ Rails.application.routes.draw do
 		get 'searched_products', to: 'instalment#searched_products'
 
 
+
+  get 'form_view_instalment', to: 'instalment#form_view_instalment'
+  get 'view_instalment', to: 'instalment#view_instalment'
+
+  
+
  get 'paydues/:saleid', to: 'instalment#paydues', as: 'paydues'
 
  get 'paid', to: 'instalment#paid'
-  get 'view_instalment', to: 'instalment#view_instalment'
+
+
 
 
   #get 'searched', to: 'cources#searched'

@@ -1,7 +1,8 @@
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
- *
+ ** require font-awesome.min|* require ionicons.min
+
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
@@ -17,8 +18,8 @@
       *= require bootstrap-datepicker.min
        *= require custom
        *= require daterangepicker
-       *= require font-awesome.min
-       *= require ionicons.min
+       
+       
        *= require jquery-jvectormap
         *= require morris
  *= require_tree .

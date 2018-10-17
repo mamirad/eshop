@@ -1,67 +1,69 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="overflow-x: auto;">    
+  <p id="notice"><%= notice %></p>
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Sale</th>
+              <th>Name</th>
+              <th>Profession</th>
+              <th>Designation</th>
+              <th>City</th>
+              <th>Address</th>
+              <th>Mobile</th>
+              <th>Officaddress</th>
+              <th>Officmobile</th>
+              <th>Cnic</th>
+              <th>Beholderimg</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<h1>Beholders</h1>
+          <tbody>
+            <% @beholders.each do |beholder| %>
+              <tr>
+                <td><%= beholder.id %></td>
+                <td><%= beholder.name1 %></td>
+                <td><%= beholder.profession1 %></td>
+                <td><%= beholder.designation1 %></td>
+                <td><%= beholder.city1 %></td>
+                <td><%= beholder.address1 %></td>
+                <td><%= beholder.mobile1 %></td>
+                <td><%= beholder.officaddress1 %></td>
+                <td><%= beholder.officmobile1 %></td>
+                <td><%= beholder.cnic21 %></td>
+                <td><%= image_tag(beholder.beholderimg1.url, size: "100x100",class:"img-thumbnail") if beholder.beholderimg1? %></td>
+             
+                <td><%= link_to 'Show', beholder %></td>
+                <td><%= link_to 'Edit', edit_beholder_path(beholder) %></td>
+                <td><%= link_to 'Destroy', beholder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>Sale</th>
-      <th>Name1</th>
-      <th>Profession1</th>
-      <th>Designation1</th>
-      <th>City1</th>
-      <th>Address1</th>
-      <th>Mobile1</th>
-      <th>Officaddress1</th>
-      <th>Officmobile1</th>
-      <th>Cnic21</th>
-      <th>Beholderimg1</th>
-      <th>Name2</th>
-      <th>Profession2</th>
-      <th>Designation2</th>
-      <th>City2</th>
-      <th>Address2</th>
-      <th>Mobile2</th>
-      <th>Officaddress2</th>
-      <th>Officmobile2</th>
-      <th>Cnic2</th>
-      <th>Beholderimg2</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+           
 
-  <tbody>
-    <% @beholders.each do |beholder| %>
-      <tr>
-        <td><%= beholder.sale %></td>
-        <td><%= beholder.name1 %></td>
-        <td><%= beholder.profession1 %></td>
-        <td><%= beholder.designation1 %></td>
-        <td><%= beholder.city1 %></td>
-        <td><%= beholder.address1 %></td>
-        <td><%= beholder.mobile1 %></td>
-        <td><%= beholder.officaddress1 %></td>
-        <td><%= beholder.officmobile1 %></td>
-        <td><%= beholder.cnic21 %></td>
-        <td><%= beholder.beholderimg1 %></td>
-        <td><%= beholder.name2 %></td>
-        <td><%= beholder.profession2 %></td>
-        <td><%= beholder.designation2 %></td>
-        <td><%= beholder.city2 %></td>
-        <td><%= beholder.address2 %></td>
-        <td><%= beholder.mobile2 %></td>
-        <td><%= beholder.officaddress2 %></td>
-        <td><%= beholder.officmobile2 %></td>
-        <td><%= beholder.cnic2 %></td>
-        <td><%= beholder.beholderimg2 %></td>
-        <td><%= link_to 'Show', beholder %></td>
-        <td><%= link_to 'Edit', edit_beholder_path(beholder) %></td>
-        <td><%= link_to 'Destroy', beholder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              <tr>
+                <td><%= beholder.id %></td>
+                
+                <td><%= beholder.name2 %></td>
+                <td><%= beholder.profession2 %></td>
+                <td><%= beholder.designation2 %></td>
+                <td><%= beholder.city2 %></td>
+                <td><%= beholder.address2 %></td>
+                <td><%= beholder.mobile2 %></td>
+                <td><%= beholder.officaddress2 %></td>
+                <td><%= beholder.officmobile2 %></td>
+                <td><%= beholder.cnic2 %></td>
+                <td><%= image_tag(beholder.beholderimg2.url, size: "100x100",class:"img-thumbnail") if beholder.beholderimg2? %></td>
+                <td><%= link_to 'Show', beholder %></td>
+                <td><%= link_to 'Edit', edit_beholder_path(beholder) %></td>
+                <td><%= link_to 'Destroy', beholder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
 
-<br>
 
-<%= link_to 'New Beholder', new_beholder_path %>
+
+           <% end %>
+          </tbody>
+        </table>  
+   
+  <%= link_to 'New Beholder', new_beholder_path %>
+
+</div>

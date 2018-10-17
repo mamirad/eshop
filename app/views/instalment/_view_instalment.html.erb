@@ -1,0 +1,69 @@
+<div class="container">
+	<%@products.each do |p|%>
+		<table border="5px" style="width: 100%">
+			<tr>
+				<td>
+					<table style="width:100%">
+						<tr>
+							<td>product img</td>
+							<td><%= image_tag(p.productimg.url, size: "30x30") if p.productimg? %></td>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td><%=p.name%></td>
+						</tr>
+						<tr>
+							<td>model </td>
+							<td><%=p.model%></td>
+						</tr>
+						<tr>
+							<td>brand </td>
+							<td><%=p.brand%></td>
+						</tr>
+					</table>
+				</td>
+
+
+				<td>
+					<table style="width:100%">
+						<tr>
+							<td>Cust img</td>
+							<td><%= image_tag(@customer.cusimg.url, size: "30x30") if @customer.cusimg? %></td>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td><%=@customer.name%></td>
+						</tr>
+						<tr>
+							<td>Address </td>
+							<td><%=@customer.address%></td>
+						</tr>
+						<tr>
+							<td>mobile </td>
+							<td> <%=@customer.mobile%></td>
+						</tr>
+					</table>
+				</td>
+				
+
+			</tr>
+		</table>
+
+		<table class="table table-bordered">
+			<tr>
+				<th>SR#</th>
+				<th>paid Amount</th>
+				<th>left amount</th>
+			</tr>
+			<%@sr=0%>
+			<%Instalment.instalments(@cnic,p.id).each do |instalment|%>
+				<tr>
+					<td>SR#<%=@sr+=1%></td>
+					<td><%=instalment.paid_amount%></td>
+					<td><%=instalment.net_balance%></td>
+				
+				</tr>
+			<%end%>
+		</table>
+	<%end%>
+</div>

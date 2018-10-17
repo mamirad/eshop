@@ -47,11 +47,26 @@ class InstalmentController < ApplicationController
 		redirect_to(search_products_path)
 
 	end
+	
+	def form_view_instalment
+	
+	end
 
 	def view_instalment
-		
-		@products=Product.joins(:sale).where(sales:{cnic:'35102'})
-		@customer=Customer.find("35102")
+		begin
+				@cnic=params[:cuscnic]
+				@products=Product.joins(:sale).where(sales:{cnic:@cnic})
+				@customer=Customer.find(@cnic)
+				respond_to do |format|
+		            format.js{render partial: 'instalment/view_instalment'}
+
+		        end 
+
+        rescue ActiveRecord::RecordNotFound => e
+  			respond_to do |format|
+			format.js{render partial: 'instalment/errormsg'}
+			end 
+		end
 		
 	end
 

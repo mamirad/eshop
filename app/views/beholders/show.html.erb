@@ -1,109 +1,232 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-bordered">
+      <h3>beholder#01</h3>
+      <tr>
+        <th>
+          Product Image
+        </th>
+        <td><%= image_tag(@beholder.beholderimg1.url, size: "100x100",class:"img-thumbnail") if @beholder.beholderimg1? %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Sale:</strong>
-  <%= @beholder.sale %>
-</p>
 
-<p>
-  <strong>Name1:</strong>
-  <%= @beholder.name1 %>
-</p>
 
-<p>
-  <strong>Profession1:</strong>
-  <%= @beholder.profession1 %>
-</p>
+      <tr>
+        <th>
+          Sale
+        </th>
+        <td> 
+          <%= @beholder.id %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Designation1:</strong>
-  <%= @beholder.designation1 %>
-</p>
 
-<p>
-  <strong>City1:</strong>
-  <%= @beholder.city1 %>
-</p>
 
-<p>
-  <strong>Address1:</strong>
-  <%= @beholder.address1 %>
-</p>
+      <tr>
+        <th>
+          Name
+        </th>
+        <td>
+         <%= @beholder.name1 %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Mobile1:</strong>
-  <%= @beholder.mobile1 %>
-</p>
 
-<p>
-  <strong>Officaddress1:</strong>
-  <%= @beholder.officaddress1 %>
-</p>
 
-<p>
-  <strong>Officmobile1:</strong>
-  <%= @beholder.officmobile1 %>
-</p>
+      <tr>
+        <th>
+          Profession
+        </th>
+        <td> <%= @beholder.profession1 %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Cnic21:</strong>
-  <%= @beholder.cnic21 %>
-</p>
 
-<p>
-  <strong>Beholderimg1:</strong>
-  <%= @beholder.beholderimg1 %>
-</p>
+      <tr>
+        <th>
+          Designation
+        </th>
+        <td> <%= @beholder.designation1 %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Name2:</strong>
-  <%= @beholder.name2 %>
-</p>
 
-<p>
-  <strong>Profession2:</strong>
-  <%= @beholder.profession2 %>
-</p>
+      <tr>
+        <th>
+          City
+        </th>
+        <td> <%= @beholder.city1 %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Designation2:</strong>
-  <%= @beholder.designation2 %>
-</p>
 
-<p>
-  <strong>City2:</strong>
-  <%= @beholder.city2 %>
-</p>
 
-<p>
-  <strong>Address2:</strong>
-  <%= @beholder.address2 %>
-</p>
+      <tr>
+        <th>
+          Address
+        </th>
+        <td> <%= @beholder.address1 %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Mobile2:</strong>
-  <%= @beholder.mobile2 %>
-</p>
 
-<p>
-  <strong>Officaddress2:</strong>
-  <%= @beholder.officaddress2 %>
-</p>
 
-<p>
-  <strong>Officmobile2:</strong>
-  <%= @beholder.officmobile2 %>
-</p>
+      <tr>
+        <th>
+          Mobile
+        </th>
+        <td> <%= @beholder.mobile1 %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Cnic2:</strong>
-  <%= @beholder.cnic2 %>
-</p>
+      <tr>
+        <th>
+          Offic Address
+        </th>
+        <td> <%= @beholder.officaddress1 %>
+        </td>
+      </tr>
+       
 
-<p>
-  <strong>Beholderimg2:</strong>
-  <%= @beholder.beholderimg2 %>
-</p>
+          <tr>
+        <th>
+          Offic Mobile
+        </th>
+        <td> <%= @beholder.officmobile1 %>
+        </td>
+      </tr>
 
-<%= link_to 'Edit', edit_beholder_path(@beholder) %> |
-<%= link_to 'Back', beholders_path %>
+
+         <tr>
+        <th>
+          CNIC
+        </th>
+        <td> <%= @beholder.cnic21 %>
+        </td>
+      </tr>
+
+
+    </table>
+
+  </div>
+  <div class="col-md-6">
+    <table class="table table-bordered">
+        <h3>beholder#02</h3>
+      <tr>
+        <th>
+          Product Image
+        </th>
+        <td><%= image_tag(@beholder.beholderimg1.url, size: "100x100",class:"img-thumbnail") if @beholder.beholderimg1? %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          Sale
+        </th>
+        <td> 
+          <%= @beholder.id %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          Name
+        </th>
+        <td>
+         <%= @beholder.name2 %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          Profession
+        </th>
+        <td> <%= @beholder.profession2 %>
+        </td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Designation
+        </th>
+        <td> <%= @beholder.designation2 %>
+        </td>
+      </tr>
+
+
+      <tr>
+        <th>
+          City
+        </th>
+        <td> <%= @beholder.city2 %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          Address
+        </th>
+        <td> <%= @beholder.address2 %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          Mobile
+        </th>
+        <td> <%= @beholder.mobile2 %>
+        </td>
+      </tr>
+
+      <tr>
+        <th>
+          Offic Address
+        </th>
+        <td> <%= @beholder.officaddress2 %>
+        </td>
+      </tr>
+       
+
+          <tr>
+        <th>
+          Offic Mobile
+        </th>
+        <td> <%= @beholder.officmobile2 %>
+        </td>
+      </tr>
+
+
+         <tr>
+        <th>
+          CNIC
+        </th>
+        <td> <%= @beholder.cnic2 %>
+        </td>
+      </tr>
+
+
+    </table>
+
+  </div>
+  
+</div>
+    
+
+  <%= link_to 'Edit', edit_beholder_path(@beholder) %> |
+  <%= link_to 'Back', beholders_path %>
+</div>

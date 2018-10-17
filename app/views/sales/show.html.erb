@@ -1,39 +1,86 @@
 <p id="notice"><%= notice %></p>
+  <table class="table table-bordered">
+     
+       <tr>
+        <th>
+          CNIC
+        </th>
+        <td> 
+          <%= @sale.cnic %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Product:</strong>
-  <%= @sale.product_id %>
-</p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @sale.cnic %>
-</p>
 
-<p>
-  <strong>Discount:</strong>
-  <%= @sale.discount %>
-</p>
+       <tr>
+        <th>
+          Product ID
+        </th>
+        <td>
+         <%= @sale.product_id %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Paid:</strong>
-  <%= @sale.paidmoney%>
-</p>
 
-<p>
-  <strong>Instalment:</strong>
-  <%= @sale.netinstalment %>
-</p>
 
-<p>
-  <strong>product_price:</strong>
-  <%= @sale.netproductprice %>
-</p>
+       <tr>
+        <th>
+          Discount
+        </th>
+        <td> <%= @sale.discount %>
+        </td>
+      </tr>
 
-<p>
-  <strong>netbalance :</strong>
-  <%= @sale.netbalance %>
-</p>
+
+       <tr>
+        <th>
+          paid Money
+        </th>
+        <td> <%= @sale.paidmoney %>
+        </td>
+      </tr>
+
+
+       <tr>
+        <th>
+          Net Instalment
+        </th>
+        <td> <%= @sale.netinstalment %>
+        </td>
+      </tr>
+
+
+
+       <tr>
+        <th>
+          Net Balance
+        </th>
+        <td> <%= @sale.netbalance %>
+        </td>
+      </tr>
+
+
+
+       <tr>
+        <th>
+          Net Product Price
+        </th>
+        <td> <%= @sale.netproductprice %>
+        </td>
+      </tr>
+
+
+       <tr>
+        <th>
+          Instalment Price
+        </th>
+        <td> <%= @sale.instalmentprice %>
+        </td>
+      </tr>
+
+
+       
+    </table>
 
 
 <%= link_to 'Edit', edit_sale_path(@sale) %> |

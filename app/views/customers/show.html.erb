@@ -1,80 +1,185 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+   <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @customer.name %>
-</p>
 
-<p>
-  <strong>City:</strong>
-  <%= @customer.city %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @customer.address %>
-</p>
 
-<p>
-  <strong>Mobile:</strong>
-  <%= @customer.mobile %>
-</p>
+    <table class="table table-bordered">
+      <tr>
+        <th>
+          Customer Image
+        </th>
+        <td><%= image_tag(@customer.cusimg.url, size: "100x100",class:"img-thumbnail") if @customer.cusimg? %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Officaddress:</strong>
-  <%= @customer.officaddress %>
-</p>
 
-<p>
-  <strong>Officmobile:</strong>
-  <%= @customer.officmobile %>
-</p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @customer.cost %>
-</p>
+       <tr>
+        <th>
+          Name
+        </th>
+        <td> 
+          <%= @customer.name %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Housestatus:</strong>
-  <%= @customer.housestatus %>
-</p>
 
-<p>
-  <strong>Cnic:</strong>
-  <%= @customer.cnic %>
-</p>
 
-<p>
-  <strong>Profession:</strong>
-  <%= @customer.profession %>
-</p>
+       <tr>
+        <th>
+          City
+        </th>
+        <td>
+         <%= @customer.city %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Designation:</strong>
-  <%= @customer.designation %>
-</p>
 
-<p>
-  <strong>Salary:</strong>
-  <%= @customer.salary %>
-</p>
 
-<p>
-  <strong>Cnicimg1:</strong>
- 
-  <%= image_tag(@customer.cnicimg1.url, size: "300x300") if @customer.cnicimg1? %>
-</p>
+       <tr>
+        <th>
+          Address
+        </th>
+        <td> <%= @customer.address %>
+        </td>
+      </tr>
 
-<p>
-  <strong>Cnicimg2:</strong>
-  <%= image_tag(@customer.cnicimg2.url, size: "300x300") if @customer.cnicimg2? %>
-</p>
 
-<p>
-  <strong>Cusimg:</strong>
- <%= image_tag(@customer.cusimg.url, size: "300x300") if @customer.cusimg? %>
-</p>
+       <tr>
+        <th>
+          Mobile
+        </th>
+        <td> <%= @customer.mobile %>
+        </td>
+      </tr>
+
+
+       <tr>
+        <th>
+          Offic Address
+        </th>
+        <td> <%= @customer.officaddress %>
+        </td>
+      </tr>
+
+
+
+       <tr>
+        <th>
+          offic Mobile
+        </th>
+        <td> <%= @customer.officmobile %>
+        </td>
+      </tr>
+
+
+
+       <tr>
+        <th>
+          Cost
+        </th>
+        <td> <%= @customer.cost %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          House Status
+        </th>
+        <td> <%= @customer.housestatus %>
+        </td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Cnic
+        </th>
+        <td> <%= @customer.cnic %>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <th>
+          profession
+        </th>
+        <td> <%= @customer.profession %>
+        </td>
+      </tr>
+       
+
+
+      <tr>
+        <th>
+          Designation
+        </th>
+        <td> <%= @customer.designation %>
+        </td>
+      </tr>
+
+
+
+            <tr>
+        <th>
+          Salary
+        </th>
+        <td> <%= @customer.salary %>
+        </td>
+      </tr>
+
+
+      <tr>
+        <th>
+          Created At
+        </th>
+        <td> <%= @customer.created_at.to_formatted_s(:long_ordinal)  %>
+        </td>
+      </tr>
+
+
+      <tr>
+        <th>
+          updated At
+        </th>
+        <td> <%= @customer.updated_at.to_formatted_s(:long_ordinal)  %>
+        </td>
+      </tr>
+
+
+
+       <tr>
+        <th>
+          Cnic Image
+        </th>
+        <td><%= image_tag(@customer.cnicimg1.url, size: "100x100",class:"img-thumbnail") if @customer.cusimg? %>
+        </td>
+      </tr>
+
+
+
+
+ <tr>
+        <th>
+          Cnic Image
+        </th>
+        <td><%= image_tag(@customer.cnicimg2.url, size: "100x100",class:"img-thumbnail") if @customer.cusimg? %>
+        </td>
+      </tr>
+
+    </table>
+
+
+
+
+
+
+
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
+</div>

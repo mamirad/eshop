@@ -10,113 +10,122 @@
       </ul>
     </div>
   <% end %>
+<div class="row">
+  <div class="col-md-6"  style="border-right: 5px solid black;"">
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name1,class:"form-control" %>
+      </div>
 
+      <div class="field">
+        <%= form.label :profession %>
+        <%= form.text_field :profession1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :designation %>
+        <%= form.text_field :designation1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :city %>
+        <%= form.text_field :city1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :address1%>
+        <%= form.text_field :address1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :mobile%>
+        <%= form.text_field :mobile1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :officaddress %>
+        <%= form.text_field :officaddress1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :officmobile %>
+        <%= form.text_field :officmobile1,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :cnic %>
+        <%= form.text_field :cnic21,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :beholderimg %>  
+        <%= image_tag(beholder.beholderimg1.url, size: "50x50",class:"img-thumbnail") if beholder.beholderimg1? %>
+        <%= form.file_field :beholderimg1,class:"form-control" %>
+      </div>
+  </div>
+   <div class="col-md-6">
+     
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :profession %>
+        <%= form.text_field :profession2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :designation %>
+        <%= form.text_field :designation2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :city %>
+        <%= form.text_field :city2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :address %>
+        <%= form.text_field :address2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :mobile %>
+        <%= form.text_field :mobile2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :officaddress %>
+        <%= form.text_field :officaddress2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :officmobile %>
+        <%= form.text_field :officmobile2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :cnic %>
+        <%= form.text_field :cnic2,class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :beholderimg %><%= image_tag(beholder.beholderimg2.url, size: "50x50",class:"img-thumbnail") if beholder.beholderimg2? %>
+        <%= form.file_field :beholderimg2,class:"form-control" %>
+      </div>
+
+   </div>
+</div>
   <div class="field">
-    <%= form.label :sale_id %>
-    <%= form.text_field :sale_id %>
+    <%= form.label :sale_id_id %>
+    <%#= form.text_field :sale_id,class:"form-control" %>
+        <%= select_tag 'sale_id', options_for_select(Sale.active_sale_id.collect{ |u| [u.id, u.id] })%>
   </div>
 
-  <div class="field">
-    <%= form.label :name1 %>
-    <%= form.text_field :name1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :profession1 %>
-    <%= form.text_field :profession1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :designation1 %>
-    <%= form.text_field :designation1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city1 %>
-    <%= form.text_field :city1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address1 %>
-    <%= form.text_field :address1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mobile1 %>
-    <%= form.text_field :mobile1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :officaddress1 %>
-    <%= form.text_field :officaddress1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :officmobile1 %>
-    <%= form.text_field :officmobile1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cnic21 %>
-    <%= form.text_field :cnic21 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :beholderimg1 %>
-    <%= form.text_field :beholderimg1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name2 %>
-    <%= form.text_field :name2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :profession2 %>
-    <%= form.text_field :profession2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :designation2 %>
-    <%= form.text_field :designation2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city2 %>
-    <%= form.text_field :city2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address2 %>
-    <%= form.text_field :address2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mobile2 %>
-    <%= form.text_field :mobile2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :officaddress2 %>
-    <%= form.text_field :officaddress2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :officmobile2 %>
-    <%= form.text_field :officmobile2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cnic2 %>
-    <%= form.text_field :cnic2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :beholderimg2 %>
-    <%= form.text_field :beholderimg2 %>
-  </div>
+  
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class=>"btn btn-success" %>
   </div>
 <% end %>

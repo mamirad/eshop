@@ -1,39 +1,48 @@
 <p id="notice"><%= notice %></p>
+<div class="container" style="overflow-x: auto;">
+    <h1>Sales</h1>
 
-<h1>Sales</h1>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sale_id</th>
+          <th>Product_id</th>
+          <th>Customer</th>
+          <th>Discount</th>
+          <th>Paid Money</th>
+          <th>Net Instalment</th>
+          <th>Net Balance</th>
+          <th>Net Product Price</th>
+          <th>Instalment Price</th>
+          <th>Create_at</th>
+          <th>update_at</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Customer</th>
-      <th>Discount</th>
-      <th>Paid</th>
-      <th>Instalment</th>
-      <th>Status</th>
-      <th>Left</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <tbody>
+        <% @sales.each do |sale| %>
+          <tr>
+            <td><%= sale.id %></td>
+            <td><%= sale.product_id %></td>
+            <td><%= sale.cnic %></td>
+            <td><%= sale.discount %></td>
+            <td><%= sale.paidmoney %></td>
+            <td><%= sale.netinstalment %></td>
+            <td><%= sale.netbalance %></td>
+            <td><%= sale.netproductprice %></td>
+            <td><%= sale.instalmentprice %></td>
+            <td><%= sale.created_at.to_formatted_s(:long_ordinal) %></td>
+            <td><%= sale.updated_at.to_formatted_s(:long_ordinal) %></td>
+            <td><%= link_to 'Show', sale %></td>
+            <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+            <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-  <tbody>
-    <% @sales.each do |sale| %>
-      <tr>
-        <td><%= sale.product %></td>
-        <td><%= sale.customer %></td>
-        <td><%= sale.discount %></td>
-        <td><%= sale.paid %></td>
-        <td><%= sale.instalment %></td>
-        <td><%= sale.status %></td>
-        <td><%= sale.left %></td>
-        <td><%= link_to 'Show', sale %></td>
-        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
-        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <br>
 
-<br>
-
-<%= link_to 'New Sale', new_sale_path %>
+    <%= link_to 'New Sale', new_sale_path %>
+</div>

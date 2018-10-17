@@ -2,7 +2,7 @@ class Instalment < ActiveRecord::Base
 	belongs_to :sale
 
 	def self.instalments(cnic,productid)
-		@record=Sale.where( cnic:'35102',netbalance: -1..Float::INFINITY).joins(:instalments).select("instalments.*,sales.*")`
+		@record=Sale.where( cnic:cnic,netbalance: -1..Float::INFINITY,product_id:productid).joins(:instalments).select('instalments.*,sales.*')
 	
 
 	end

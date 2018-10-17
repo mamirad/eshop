@@ -1,6 +1,74 @@
 <h1>Editing Sale</h1>
 
-<%= render 'form', sale: @sale %>
+<%#= render 'form', sale: @sale %>
+
+
+
+
+<%= form_with(model: @sale, local: true) do |form| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sale.errors.count, "error") %> prohibited this sale from being saved:</h2>
+
+      <ul>
+      <% @sale.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Uniq_product_ID %>
+    <%= form.text_field :product_id,:readonly=>true,class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :customer_CNIC %>
+    <%= form.text_field :cnic ,:readonly=>true,class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :discount_in_percentage %>
+    <%= form.number_field :discount ,:readonly=>true,class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Instalment %>
+    <%= form.number_field :netinstalment ,:readonly=>true,class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :net_balance %>
+    <%= form.number_field :netbalance,:readonly=>true,class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Product_Price %>
+    <%= form.text_field :netproductprice ,:readonly=>true,class:"form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :instalment_price %>
+    <%= form.number_field :instalmentprice ,:readonly=>true,class:"form-control"%>
+  </div>
+    <div class="field">
+    <%= form.label :paid_Money %>
+    <%= form.number_field :paidmoney ,:readonly=>true,class:"form-control"%>
+  </div>
+
+  
+
+
+  <div class="actions">
+    <%= form.submit :class=>"btn btn-primary disabled" %>
+  </div>
+<% end %>
+
+
+
+
+
 
 <%= link_to 'Show', @sale %> |
 <%= link_to 'Back', sales_path %>

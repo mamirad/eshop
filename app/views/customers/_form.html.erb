@@ -13,81 +13,81 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name,class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city ,class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address ,class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :mobile %>
-    <%= form.text_field :mobile %>
+    <%= form.text_field :mobile ,class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :officaddress %>
-    <%= form.text_field :officaddress %>
+    <%= form.text_field :officaddress,class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :officmobile %>
-    <%= form.text_field :officmobile %>
+    <%= form.text_field :officmobile,class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :cost %>
-    <%= form.text_field :cost %>
+    <%= form.text_field :cost ,class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :housestatus %>
-    <%= form.text_field :housestatus %>
+    <%= form.text_field :housestatus,class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :cnic %>
-    <%= form.text_field :cnic %>
+    <%= form.text_field :cnic,class:"form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :profession %>
-    <%= form.text_field :profession %>
+    <%= form.text_field :profession ,class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :designation %>
-    <%= form.text_field :designation %>
+    <%= form.text_field :designation ,class:"form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :salary %>
-    <%= form.number_field :salary %>
+    <%= form.number_field :salary ,class:"form-control"%>
   </div>
 
  <%= image_tag(@customer.cnicimg1.url, size: "300x300") if @customer.cnicimg1? %>
   <div class="field">
     <%= form.label :cnicimg1 %>
-    <%= form.file_field :cnicimg1 %>
+    <%= form.file_field :cnicimg1 ,class:"form-control"%>
   </div>
  <%= image_tag(@customer.cnicimg2.url, size: "300x300") if @customer.cnicimg2? %>
   <div class="field">
     <%= form.label :cnicimg2 %>
-    <%= form.file_field :cnicimg2 %>
+    <%= form.file_field :cnicimg2 ,class:"form-control"%>
   </div>
  <%= image_tag(@customer.cusimg.url, size: "300x300") if @customer.cusimg? %>
   <div class="field">
     <%= form.label :cusimg %>
-    <%= form.file_field :cusimg %>
+    <%= form.file_field :cusimg ,class:"form-control"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class=>"btn btn-success"%>
   </div>
 <% end %>

@@ -10,6 +10,10 @@ class Sale < ApplicationRecord
 	@temp=Sale.find(saleid)
 	@temp.netbalance=ubalance
 	@temp.save
-end
+	end
+	def self.active_sale_id
+@saleid = Sale.where(netbalance: 1..Float::INFINITY).select("id")
+
+	end
 
 end
