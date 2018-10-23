@@ -62,7 +62,7 @@ class InstalmentController < ApplicationController
 
 		        end 
 
-        rescue ActiveRecord::RecordNotFound => e
+       rescue Exception => e # Never do this
   			respond_to do |format|
 			format.js{render partial: 'instalment/errormsg'}
 			end 
