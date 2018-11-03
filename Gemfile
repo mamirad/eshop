@@ -21,8 +21,8 @@ gem 'rails', '~> 5.2.1'
 # Use Puma as the app server
 
 
-# gem 'puma', '~> 3.11'
-gem "passenger"
+gem 'puma', '~> 3.11'
+# gem "passenger"
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 
 # Use SCSS for stylesheets
@@ -82,6 +82,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   # gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-# gem 'pg', '~> 0.11'
+gem 'pg', '~> 0.11'
 
 end
