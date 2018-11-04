@@ -1,7 +1,7 @@
 class Sale < ApplicationRecord
 
-  	# belongs_to :customer, foreign_key: :cnic, class_name: 'Customer'
-	belongs_to :customer
+  	 belongs_to :customer, foreign_key: :cnic, class_name: 'Customer'
+	#belongs_to :customer
 	has_many :beholders
   	belongs_to :product
   	has_many :instalments
